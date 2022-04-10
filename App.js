@@ -14,9 +14,27 @@ import InputScreen from './src/screens/InputScreen';
 import MissionScreen from './src/screens/MissionScreen';
 import LocationScreen from './src/screens/LocationScreen';
 import RedeemScreen from './src/screens/RedeemScreen';
+import {LogBox} from 'react-native';
+
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   const Stack = createStackNavigator();
+
+  const HomeStack = () => (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreem"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
 
   const TabArr = [
     {
@@ -34,7 +52,7 @@ export default function App() {
       type: Icons.MaterialCommunityIcons,
       activeIcon: 'home-city',
       inactiveIcon: 'home-city-outline',
-      component: HomeScreen,
+      component: HomeStack,
     },
 
     {
@@ -50,6 +68,7 @@ export default function App() {
   const Tab = createBottomTabNavigator();
   const TabNavigator = () => (
     <Tab.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
@@ -81,10 +100,11 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}}
+        initialRouteName="Login">
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Input" component={InputScreen} />
         <Stack.Screen name="Location" component={LocationScreen} />
       </Stack.Navigator>

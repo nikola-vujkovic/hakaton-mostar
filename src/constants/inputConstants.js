@@ -1,0 +1,98 @@
+export default {
+  prevoz: {
+    text: 'Za skeniran QR kod sa računa za kartu za javni prevoz dobijate 5 građanskih poena.',
+    image: require('../images/djela/image_javniprevoz.png'),
+    type: 'qr',
+    value: 5,
+  },
+  bicikl: {
+    text: 'Za skeniran QR kod sa računa za iznajmljivanje gradskog bicikla, dobijate 5 građanskih poena.',
+    image: require('../images/djela/image_gradskibicikl.png'),
+    type: 'qr',
+    value: 5,
+  },
+  skuter: {
+    text: 'Za skeniran QR kod sa računa za iznajmljivanje gradskog električnog skutera dobijate 5 građanskih poena.',
+    image: require('../images/djela/image_skuter.png'),
+    type: 'qr',
+    value: 5,
+  },
+  reciklaza: {
+    text: 'Za skeniran QR kod sa potvrde o donošenju reciklažnog materijala u udruženje “Ne zagađuj” dobijate 25 građanskih poena po kilogramu materijala.',
+    image: require('../images/djela/image_reciklaza.png'),
+    type: 'qr',
+    value: 25,
+  },
+  azil: {
+    text: 'Za skeniran QR kod sa potvrde o donaciji hrane gradskom azilu za pse i mačke “Levijatan”, dobijate 25 građanskih poena.',
+    image: require('../images/djela/image_hrana.png'),
+    type: 'qr',
+    value: 25,
+  },
+  hrana: {
+    text: 'Za skeniran QR kod sa potvrde o donaciji humanitarnim organizacijama “Budimo  ljudi”, “Srce u srcu” ili “Topli obrok”, dobijate 25 građanskih poena.',
+    image: require('../images/djela/image_hranaodjeca.png'),
+    type: 'qr',
+    value: 25,
+  },
+  invaliditet: {
+    text: 'Prijavi mjesto u našem gradu pristupačno za lica sa invaliditetom sa što više informacija (pragovi, lift,prilazi, erratic rampe, kabine ako je u pitanju prodavnica garderobe). Ukoliko tvoj opis bude potvrđen od određnog dijela korisnika, ostvaruješ 25 građanskih poena.',
+    image: require('../images/djela/image_licaukolicima.png'),
+    type: 'lokacija',
+    value: 25,
+  },
+  djeca: {
+    text: 'Za skeniran QR kod sa potvrde o donaciji domu za nezbrinutu djecu “Zagrljaj, dobijate 25 građanskih poena.',
+    image: require('../images/djela/image_nezbrinutadjeca.png'),
+    type: 'qr',
+    value: 25,
+  },
+  racun: {
+    text: 'Prijavi poslovnicu koja ne izdaje fiskalne račune. Ukoliko se tvoja prijava u budućnosti pokaže kao tačna, ostvaruješ 25 građanskih poena.',
+    image: require('../images/djela/image_racun.png'),
+    type: 'racun',
+    value: 25,
+  },
+  sms: {
+    text: 'Nakon slanja SMS-a na jedan od humanitarnih brojeva, dobijate kod čijim unosom u polje iznad ostvarujete 5 građanskih poena.',
+    image: require('../images/djela/image_sms.png'),
+    type: 'kod',
+    value: 25,
+  },
+  krv: {
+    text: 'Za skeniran QR kod sa potvrde o donaciji krvi u Zavodu za transfuziju, dobijate 35 građanskih poena.',
+    image: require('../images/djela/image_doniranjekrvi.png'),
+    type: 'qr',
+    value: 35,
+  },
+  glasanje: {
+    text: 'Nakon obavljenog glasanja, zatražite od nadzočnih lica Vašu kartu sa QR kodom, čijim skeniranjem ostvarujete 20 građanskih poena.',
+    image: require('../images/djela/image_glasaj.png'),
+    type: 'qr',
+    value: 20,
+  },
+  volontiranje: {
+    text: 'Za skeniran QR kod sa potvrde o volontiranju u humanitarnim organizacijama “Budimo ljudi”, “Srce u srcu” ili “Topli obrok”, dobijate 25 građanskih poena.',
+    image: require('../images/djela/image_volontiranje.png'),
+    type: 'qr',
+    value: 25,
+  },
+  parkiranje: {
+    text: 'Nakon uplate “Humanog” parkinga putem SMS-a, dobijate kod čijim unosom u polje iznad ostvarujete 5 građanskih poena.',
+    image: require('../images/djela/image_parkiranje.png'),
+    type: 'kod',
+    value: 25,
+  },
+  sadnica: {
+    text: 'Za svaku doniranu sadnicu preko udruženja “Gorani”, na e-mail adresu dobijate QR kod čijim skeniranjem ostvarujete 5 građanskih poena.',
+    image: require('../images/djela/image_sadnica.png'),
+    type: 'qr',
+    value: 5,
+  },
+  akcije: {
+    text: 'Ova sekcija biće dostupna u slučaju specijalnih akcija za sakupljanje građanskih poena u organizaciji grada.',
+    image: require('../images/djela/image_akcijegrada.png'),
+    type: 'akcija',
+    value: 25,
+  },
+};
