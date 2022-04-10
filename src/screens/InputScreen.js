@@ -18,6 +18,7 @@ const {width, height} = Dimensions.get('window');
 
 export default function InputScreen({navigation, route}) {
   const [backgroundImageHeight, setBackgroundImageHeight] = React.useState(0);
+  const [hasPermission, setHasPermission] = React.useState(false);
 
   const inputSection = (type, value, id) => {
     if (type === 'qr') {
@@ -31,6 +32,13 @@ export default function InputScreen({navigation, route}) {
             );
           }, 10000);
         }
+      }, []);
+
+      React.useEffect(() => {
+        (async () => {
+          const status = await Camera.requestCameraPermission();
+          setHasPermission(status === 'authorized');
+        })();
       }, []);
 
       const devices = useCameraDevices();
@@ -55,7 +63,9 @@ export default function InputScreen({navigation, route}) {
                 borderColor: 'teal',
                 overflow: 'hidden',
               }}>
-              <Camera style={{flex: 1}} device={device} isActive={true} />
+              {hasPermission && (
+                <Camera style={{flex: 1}} device={device} isActive={true} />
+              )}
             </View>
           </View>
         </>
