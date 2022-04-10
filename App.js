@@ -14,6 +14,9 @@ import InputScreen from './src/screens/InputScreen';
 import MissionScreen from './src/screens/MissionScreen';
 import LocationScreen from './src/screens/LocationScreen';
 import RedeemScreen from './src/screens/RedeemScreen';
+import {LogBox} from 'react-native';
+
+LogBox.ignoreAllLogs(); //Ignore all log notifications
 
 export default function App() {
   const Stack = createStackNavigator();
@@ -50,6 +53,7 @@ export default function App() {
   const Tab = createBottomTabNavigator();
   const TabNavigator = () => (
     <Tab.Navigator
+      initialRouteName="Home"
       screenOptions={{
         headerShown: false,
         tabBarStyle: {
@@ -81,7 +85,10 @@ export default function App() {
 
   return (
     <NavigationContainer>
-      <Stack.Navigator screenOptions={{headerShown: false}}>
+      <Stack.Navigator
+        screenOptions={{headerShown: false}}
+        // initialRouteName="Login"
+      >
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="Login" component={LoginScreen} />
         <Stack.Screen name="Profile" component={ProfileScreen} />
