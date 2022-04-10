@@ -21,6 +21,21 @@ LogBox.ignoreAllLogs(); //Ignore all log notifications
 export default function App() {
   const Stack = createStackNavigator();
 
+  const HomeStack = () => (
+    <Stack.Navigator>
+      <Stack.Screen
+        name="HomeScreem"
+        component={HomeScreen}
+        options={{headerShown: false}}
+      />
+      <Stack.Screen
+        name="Profile"
+        component={ProfileScreen}
+        options={{headerShown: false}}
+      />
+    </Stack.Navigator>
+  );
+
   const TabArr = [
     {
       route: 'Redeem',
@@ -37,7 +52,7 @@ export default function App() {
       type: Icons.MaterialCommunityIcons,
       activeIcon: 'home-city',
       inactiveIcon: 'home-city-outline',
-      component: HomeScreen,
+      component: HomeStack,
     },
 
     {
@@ -90,7 +105,6 @@ export default function App() {
         initialRouteName="Login">
         <Stack.Screen name="TabNavigator" component={TabNavigator} />
         <Stack.Screen name="Login" component={LoginScreen} />
-        <Stack.Screen name="Profile" component={ProfileScreen} />
         <Stack.Screen name="Input" component={InputScreen} />
         <Stack.Screen name="Location" component={LocationScreen} />
       </Stack.Navigator>

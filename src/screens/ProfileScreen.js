@@ -11,7 +11,7 @@ import React from 'react';
 import FastImage from 'react-native-fast-image';
 import Pie from 'react-native-pie';
 
-export default function ProfileScreen() {
+export default function ProfileScreen({navigation}) {
   return (
     <SafeAreaView>
       <ImageBackground
@@ -38,7 +38,7 @@ export default function ProfileScreen() {
                 <Text style={styles.locationText}>Mostar</Text>
               </View>
 
-              <Text style={styles.medalText}>građanin sa značkom</Text>
+              <Text style={styles.medalText}>Građanin sa značkom</Text>
               <FastImage
                 style={{width: 45, height: 60}}
                 source={require('../images/nagrade/Goldmedalicon.png')}
@@ -59,7 +59,9 @@ export default function ProfileScreen() {
               </Text>
             </TouchableOpacity>
             <View style={styles.line} />
-            <TouchableOpacity style={styles.accountButton}>
+            <TouchableOpacity
+              onPress={() => navigation.navigate('Login')}
+              style={styles.accountButton}>
               <Text
                 style={{
                   textAlign: 'center',
@@ -131,12 +133,12 @@ export default function ProfileScreen() {
                   color: 'black',
                   fontFamily: 'Imprima-Regular',
                 }}>
-                120
+                3
               </Text>
               <Image
                 style={{height: 34, width: 34, marginLeft: 8}}
                 resizeMode={FastImage.resizeMode.stretch}
-                source={require('../images/nagrade/Diamondicon.png')}
+                source={require('../images/nagrade/mission.png')}
               />
             </View>
           </View>
