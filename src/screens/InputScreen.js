@@ -137,30 +137,9 @@ export default function InputScreen({navigation, route}) {
               fontFamily: 'Imprima-Regular',
               fontSize: 20,
               paddingBottom: 3,
-            }}>
-            Naziv mjesta:
-          </Text>
-          <TextInput
-            style={{
-              width: width * 0.9,
-              padding: 20,
-              backgroundColor: '#A3E6DF',
-              borderRadius: 20,
-            }}
-            placeholderTextColor="#fff"
-            placeholder="Mjesto..."
-          />
-          <Text
-            style={{
-              color: 'black',
-              alignSelf: 'flex-start',
-              paddingLeft: 30,
-              fontFamily: 'Imprima-Regular',
-              fontSize: 20,
-              paddingBottom: 3,
               paddingTop: 10,
             }}>
-            Detaljan opis:
+            Naziv mjesta i detaljan opis:
           </Text>
           <TextInput
             style={{
@@ -177,7 +156,7 @@ export default function InputScreen({navigation, route}) {
             activeOpacity={0.8}
             style={{
               width: width * 0.6,
-              padding: 20,
+              padding: 15,
               backgroundColor: '#50C0B1',
               marginTop: 20,
               borderRadius: 20,

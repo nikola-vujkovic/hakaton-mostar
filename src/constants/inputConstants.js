@@ -36,7 +36,7 @@ export default {
     value: 25,
   },
   invaliditet: {
-    text: 'Podijeli mjesto dostupno za lica sa invaliditetom',
+    text: 'Prijavi mjesto u našem gradu pristupačno za lica sa invaliditetom sa što više informacija (pragovi, lift,prilazi, erratic rampe, kabine ako je u pitanju prodavnica garderobe). Ukoliko tvoj opis bude potvrđen od određnog dijela korisnika, ostvaruješ 25 građanskih poena.',
     image: require('../images/djela/image_licaukolicima.png'),
     type: 'lokacija',
     value: 25,
@@ -48,7 +48,7 @@ export default {
     value: 25,
   },
   racun: {
-    text: 'Prijavi neizdavanje fiskalnih računa',
+    text: 'Prijavi poslovnicu koja ne izdaje fiskalne račune. Ukoliko se tvoja prijava u budućnosti pokaže kao tačna, ostvaruješ 25 građanskih poena.',
     image: require('../images/djela/image_racun.png'),
     type: 'racun',
     value: 25,

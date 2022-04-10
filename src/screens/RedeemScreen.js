@@ -6,12 +6,18 @@ import {
   SafeAreaView,
   Image,
   TouchableOpacity,
+  Dimensions,
+  Modal,
 } from 'react-native';
 import React from 'react';
 import FastImage from 'react-native-fast-image';
 import {ScrollView} from 'react-native-gesture-handler';
 
+const {width, height} = Dimensions.get('window');
+
 export default function RedeemScreen() {
+  const [modalVisible, setModalVisible] = React.useState(false);
+
   return (
     <SafeAreaView style={styles.generalContainer}>
       <View style={styles.titleContainer}>
@@ -103,7 +109,9 @@ export default function RedeemScreen() {
                 width: '100%',
                 height: 170,
               }}>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -132,9 +140,34 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}bazen
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      30
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -163,9 +196,34 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}kino
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      60
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -194,6 +252,29 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}koncert
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      75
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
             </View>
@@ -241,7 +322,9 @@ export default function RedeemScreen() {
                 width: '100%',
                 height: 170,
               }}>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -270,9 +353,34 @@ export default function RedeemScreen() {
                     }}>
                     Ulaznica za{'\n'}muzej
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      30
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -285,7 +393,7 @@ export default function RedeemScreen() {
                       flex: 1,
                       marginHorizontal: 10,
                       height: 120,
-                      width: 90,
+                      width: 100,
                       marginTop: 5,
                     }}
                     resizeMode={FastImage.resizeMode.contain}
@@ -301,9 +409,34 @@ export default function RedeemScreen() {
                     }}>
                     Ulaznica za{'\n'}galeriju
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      30
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -332,6 +465,29 @@ export default function RedeemScreen() {
                     }}>
                     Članarina za{'\n'}biblioteku
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      70
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
             </View>
@@ -346,7 +502,9 @@ export default function RedeemScreen() {
                 width: '100%',
                 height: 170,
               }}>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -375,9 +533,34 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}pozorište
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      60
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -406,6 +589,29 @@ export default function RedeemScreen() {
                     }}>
                     Karta za dječije{'\n'}pozorište
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      50
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
               <View
@@ -460,7 +666,9 @@ export default function RedeemScreen() {
                 width: '100%',
                 height: 170,
               }}>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -489,9 +697,34 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}autobus
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      30
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -521,9 +754,34 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}rent-a-bike
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      20
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -537,7 +795,7 @@ export default function RedeemScreen() {
                       marginHorizontal: 10,
                       height: 90,
                       width: 100,
-                      marginTop: -20,
+                      marginTop: -10,
                     }}
                     resizeMode={FastImage.resizeMode.contain}
                     source={require('../images/nagrade/ParkingIcon.png')}
@@ -552,6 +810,29 @@ export default function RedeemScreen() {
                     }}>
                     Karta za{'\n'}parking
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      15
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
             </View>
@@ -599,7 +880,9 @@ export default function RedeemScreen() {
                 width: '100%',
                 height: 170,
               }}>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -628,9 +911,34 @@ export default function RedeemScreen() {
                     }}>
                     Doniraj u fond{'\n'}za oboljele
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      20
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
-              <TouchableOpacity activeOpacity={0.8}>
+              <TouchableOpacity
+                activeOpacity={0.6}
+                onPress={() => setModalVisible(true)}>
                 <View
                   style={{
                     flexDirection: 'column',
@@ -659,6 +967,29 @@ export default function RedeemScreen() {
                     }}>
                     Humanitarni broj
                   </Text>
+                  <View
+                    style={{
+                      flexDirection: 'row',
+                      width: '100%',
+                      justifyContent: 'center',
+                      alignItems: 'center',
+                      marginRight: -5,
+                    }}>
+                    <Text
+                      style={{
+                        color: 'black',
+                        fontFamily: 'Imprima-Regular',
+                        fontSize: 18,
+                        textAlign: 'center',
+                      }}>
+                      20
+                    </Text>
+                    <FastImage
+                      source={require('../images/dodatno/coin.png')}
+                      resizeMode={FastImage.resizeMode.contain}
+                      style={{width: width * 0.08, aspectRatio: 1}}
+                    />
+                  </View>
                 </View>
               </TouchableOpacity>
               <View
@@ -675,6 +1006,45 @@ export default function RedeemScreen() {
           <View style={{height: 100}} />
         </ScrollView>
       </View>
+
+      <Modal
+        animationType="fade"
+        transparent={true}
+        visible={modalVisible}
+        onRequestClose={() => {
+          setModalVisible(false);
+        }}>
+        <View
+          style={{
+            flex: 1,
+            alignItems: 'center',
+            justifyContent: 'center',
+            backgroundColor: '#ffffffA0',
+          }}>
+          <View
+            style={{
+              width: width * 0.85,
+              backgroundColor: '#6BD16E',
+              padding: 20,
+              borderRadius: 20,
+            }}>
+            <Text
+              style={{
+                fontFamily: 'Imprima-Regular',
+                fontSize: 20,
+                color: 'white',
+                marginBottom: 20,
+              }}>
+              Skenirajte QR u odgovarajućim poslovnicama/organizacijama:
+            </Text>
+            <FastImage
+              source={require('../images/dodatno/qr_img.png')}
+              resizeMode={FastImage.resizeMode.contain}
+              style={{width: '100%', aspectRatio: 1}}
+            />
+          </View>
+        </View>
+      </Modal>
     </SafeAreaView>
   );
 }
