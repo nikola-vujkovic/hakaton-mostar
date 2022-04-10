@@ -19,8 +19,6 @@ export default function App() {
   const Stack = createStackNavigator();
 
   const TabArr = [
-    
-
     {
       route: 'Redeem',
       name: 'Redeem',
@@ -36,7 +34,7 @@ export default function App() {
       type: Icons.MaterialCommunityIcons,
       activeIcon: 'home-city',
       inactiveIcon: 'home-city-outline',
-      component: ProfileScreen,
+      component: HomeScreen,
     },
 
     {
