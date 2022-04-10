@@ -156,6 +156,19 @@ export default function HomeScreen({navigation}) {
           Moj profil
         </Text>
       </TouchableOpacity>
+
+      <Text
+        style={{
+          position: 'absolute',
+          marginTop: 15,
+          color: 'teal',
+          fontFamily: 'Imprima-Regular',
+          fontSize: 30,
+          alignSelf: 'center',
+          textAlign: 'center',
+        }}>
+        Ja,{'\n'}Građanin
+      </Text>
     </>
   );
 }
