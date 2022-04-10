@@ -1,5 +1,15 @@
-import {View, Text} from 'react-native';
+import {
+  View,
+  Text,
+  ImageBackground,
+  StyleSheet,
+  SafeAreaView,
+  Image,
+  TouchableOpacity,
+} from 'react-native';
 import React from 'react';
+import FastImage from 'react-native-fast-image';
+import Pie from 'react-native-pie';
 
 export default function ProfileScreen({navigation}) {
   return (
